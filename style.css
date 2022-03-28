@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-grow: 0;
+    flex-flow: row wrap;
+    width: 550px;
+    height: 550px;
+    border: 1px solid black;
+}
+
+.square {
+    flex: 1 1 auto;
+}
+
+.square:hover {
+    background-color: black;
+}
