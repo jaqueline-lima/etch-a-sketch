@@ -1,10 +1,18 @@
-function createGrid() {
+function getSize() {
+    let size = prompt("Enter a number for the grid size (maximum of 100): ");
+    if (size <= 100 && size > 0) {
+        return size;
+    } else {
+        alert("Please enter a number smaller than ou equal to 100.");
+        size = getSize();
+    }
+}
+
+function createGrid(size) {
     const container = document.querySelector('.container');
     let square,
-        size,
         squareSide;
 
-    size = 16;
     squareSide = 550/size;
     for (let i = 0; i < (size * size); i++) {
         square = document.createElement('div');
@@ -14,4 +22,5 @@ function createGrid() {
     }
 }
 
-createGrid();
+size = getSize();
+createGrid(size);
