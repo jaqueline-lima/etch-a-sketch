@@ -21,5 +21,19 @@ function createGrid(size) {
     }
 }
 
+function clearGrid() {
+    const container = document.querySelector('.container');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    size = getSize();
+    createGrid(size);
+}
+
 size = getSize();
 createGrid(size);
+
+const clearButton = document.querySelector('#clear');
+    clearButton.addEventListener('click', () => {
+        clearGrid();
+    })
