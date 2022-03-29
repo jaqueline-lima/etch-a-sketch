@@ -1,11 +1,10 @@
 function getSize() {
     let size = prompt("Enter a number for the grid size (maximum of 100): ");
-    if (size <= 100 && size > 0) {
-        return size;
-    } else {
+    while (!(size <= 100 && size > 0)) {
         alert("Please enter a number smaller than ou equal to 100.");
-        size = getSize();
+        size = prompt("Enter a number for the grid size (maximum of 100): ");
     }
+    return size;
 }
 
 function createGrid(size) {
