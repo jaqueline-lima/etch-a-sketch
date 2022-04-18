@@ -24,10 +24,8 @@ body {
 
 .square {
     flex: 1 1 auto;
-    transition: 0s 180s;
 }
 
-.square:hover {
+.color {
     background-color: black;
-    transition: 0s;
 }

@@ -32,6 +32,12 @@ function clearGrid() {
 
 createGrid(16);
 
+const squares = document.querySelectorAll('.square').forEach(square => {
+    square.addEventListener('mouseover', () => {
+        square.classList.add('color');
+    })
+});
+
 const clearButton = document.querySelector('#clear');
 clearButton.addEventListener('click', () => {
     clearGrid();
