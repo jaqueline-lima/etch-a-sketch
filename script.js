@@ -28,6 +28,11 @@ function clearGrid() {
     }
     size = getSize();
     createGrid(size);
+    const squares = document.querySelectorAll('.square').forEach(square => {
+        square.addEventListener('mouseover', () => {
+            square.classList.add('color');
+        })
+    });
 }
 
 createGrid(16);
