@@ -30,10 +30,9 @@ function clearGrid() {
     createGrid(size);
 }
 
-size = getSize();
-createGrid(size);
+createGrid(16);
 
 const clearButton = document.querySelector('#clear');
-    clearButton.addEventListener('click', () => {
-        clearGrid();
-    })
+clearButton.addEventListener('click', () => {
+    clearGrid();
+})
