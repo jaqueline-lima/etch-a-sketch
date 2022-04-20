@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 body {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Rajdhani', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@ body {
 }
 
 button {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Rajdhani', sans-serif;
     font-size: larger;
     margin-bottom: 30px;
     padding: 30px;
