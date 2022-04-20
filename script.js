@@ -19,6 +19,11 @@ function createGrid(size) {
         square.style.cssText = `width: ${squareSide}px;`, `height: ${squareSide}px;`;
         container.appendChild(square);
     } 
+    const squares = document.querySelectorAll('.square').forEach(square => {
+        square.addEventListener('mouseover', () => {
+            colorSquare(square, squaresColor);
+        }) 
+    });
 }
 
 function clearGrid() {
@@ -28,11 +33,6 @@ function clearGrid() {
     }
     size = getSize();
     createGrid(size);
-    const squares = document.querySelectorAll('.square').forEach(square => {
-        square.addEventListener('mouseover', () => {
-            colorSquare(square, squaresColor);
-        })
-    });
 }
 
 function makeRainbow(square) {
@@ -62,12 +62,6 @@ let squaresColor = 'black';
 const rb = document.querySelector('#rb');
 rb.addEventListener('click', () => {
     squaresColor = 'rb';
-});
-
-const squares = document.querySelectorAll('.square').forEach(square => {
-    square.addEventListener('mouseover', () => {
-        colorSquare(square, squaresColor);
-    })
 });
 
 const clearButton = document.querySelector('#clear');
