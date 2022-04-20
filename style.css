@@ -7,7 +7,7 @@ body {
     align-items: center;
 }
 
-#clear {
+button {
     font-family: 'Inconsolata', monospace;
     font-size: large;
     margin-bottom: 30px;
@@ -24,8 +24,4 @@ body {
 
 .square {
     flex: 1 1 auto;
-}
-
-.color {
-    background-color: black;
 }
