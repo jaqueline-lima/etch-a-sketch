@@ -7,10 +7,27 @@ body {
     align-items: center;
 }
 
+.content {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
 button {
     font-family: 'Inconsolata', monospace;
-    font-size: large;
+    font-size: larger;
     margin-bottom: 30px;
+    padding: 30px;
+    background-color: #c299ff;
+}
+
+button:hover {
+    background-color: #408;
+    color: white;
 }
 
 .container {
