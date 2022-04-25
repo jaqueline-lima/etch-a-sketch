@@ -1,17 +1,20 @@
-function getSize() {
-    let size = prompt("Enter a number for the grid size (maximum of 100): ");
-    while (!(size <= 100 && size > 0)) {
-        alert("Please enter a number smaller than ou equal to 100.");
-        size = prompt("Enter a number for the grid size (maximum of 100): ");
+ function getSize() {
+    const gridSize = document.querySelector('#grid');
+    let size = gridSize.value;
+    if (size > 100) {
+        size = 100;
+    } else if (size < 1) {
+        size = 1;
     }
     return size;
-}
+} 
 
 function clearGrid() {
     const container = document.querySelector('.container');
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
+
     size = getSize();
     createGrid(size);
 
