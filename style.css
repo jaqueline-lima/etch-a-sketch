@@ -20,9 +20,12 @@ body {
 button {
     font-family: 'Rajdhani', sans-serif;
     font-size: larger;
+    margin-top: 10px;
     margin-bottom: 30px;
     padding: 30px;
     background-color: #c299ff;
+    border: 3px solid rgb(127, 48, 207);
+    border-radius: 10px;
 }
 
 button:hover {
@@ -41,4 +44,30 @@ button:hover {
 
 .square {
     flex: 1 1 auto;
+}
+
+.menu {
+    display: flex;
+    flex-flow: column wrap;
+    border: 3px solid rgb(101, 11, 161);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.new-grid {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border: 3px solid rgb(101, 11, 161);
+    padding: 10px;
+}
+
+#grid {
+    width: auto;
+}
+
+.colors {
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
 }
