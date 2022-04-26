@@ -12,12 +12,17 @@
 <body>
     <h1>Etch-a-Sketch</h1>
     <div class="content">
-        <div class="menu">
-            <label for="grid">New grid size (between 1 and 100):</label>
-            <input type="number" id="grid" name="grid" min="1" max="100">
-            <button type="button" id="clear">Clear and make new grid</button>
-            <button type="button" id="rb">Rainbow</button>
-            <button type="button" id="black">Black</button>
+        <div class="menu"> 
+            <div class="new-grid">
+                <label for="grid">New grid size (between 1 and 100):</label>
+                <input type="number" id="grid" name="grid" min="1" max="100">
+                <button type="button" id="clear">Reset grid</button>
+            </div>
+            <div class="colors">
+                <button type="button" id="rb">Rainbow</button>
+                <button type="button" id="black">Black</button>
+                <button type="button" id="white">White</button>
+            </div>
         </div>
         <div class="container"></div>
     </div>

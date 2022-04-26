@@ -38,11 +38,19 @@ function makeRainbow() {
 }
 
 function colorSquare(square, squaresColor) {
-    if (squaresColor === 'black') {
-        square.style.cssText += 'background-color: black';
-    } else if (squaresColor === 'rb') {
-        let rb = makeRainbow();
-        square.style.cssText += rb;
+    switch (squaresColor) {
+        case 'black':
+            square.style.cssText += 'background-color: black';
+            break;
+        
+        case 'white':
+            square.style.cssText += 'background-color: white';
+            break;
+
+        case 'rb':
+            let rb = makeRainbow();
+            square.style.cssText += rb;
+            break;
     }
 }
 
@@ -78,6 +86,11 @@ rb.addEventListener('click', () => {
 const blackButton = document.querySelector('#black');
 blackButton.addEventListener('click', () => {
     squaresColor = 'black';
+});
+
+const whiteButton = document.querySelector('#white');
+whiteButton.addEventListener('click', () => {
+    squaresColor = 'white';
 });
 
 const clearButton = document.querySelector('#clear');
