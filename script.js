@@ -40,17 +40,21 @@ function makeRainbow() {
 function colorSquare(square, squaresColor) {
     switch (squaresColor) {
         case 'black':
-            square.style.cssText += 'background-color: black';
+            square.style.cssText += 'background-color: black;';
             break;
         
         case 'white':
-            square.style.cssText += 'background-color: white';
+            square.style.cssText += 'background-color: white;';
             break;
 
         case 'rb':
             let rb = makeRainbow();
             square.style.cssText += rb;
             break;
+
+        default:
+            console.log(squaresColor);
+            square.style.cssText += `background-color: ${squaresColor};`;
     }
 }
 
@@ -91,6 +95,11 @@ blackButton.addEventListener('click', () => {
 const whiteButton = document.querySelector('#white');
 whiteButton.addEventListener('click', () => {
     squaresColor = 'white';
+});
+
+const colorPicker = document.querySelector('#color-picker');
+colorPicker.addEventListener('change', () => {
+    squaresColor = colorPicker.value;
 });
 
 const clearButton = document.querySelector('#clear');
